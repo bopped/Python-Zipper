@@ -24,6 +24,7 @@ class Zipped:
 		basename = os.path.basename(dirname)
 		z = zipfile.ZipFile(zipname, 'w', zipfile.ZIP_DEFLATED)
 		current = 0
+		self.log('%s%sPercentage %s\t\t\t\t\tPath' % (Red,Underline,Lightblue), "")
 		for root, dirs, files in os.walk(dirname):
 			for fname in files:
 				path = os.path.join(root, fname)
