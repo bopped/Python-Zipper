@@ -9,11 +9,12 @@ class Zipped:
 		sys.stdout.flush()
 
 	def zipdir(self,zipname, dirname):
-		underline = '\033[04m'
-		lightblue = '\033[94m'
-		red = '\033[31m'
+		Underline = '\033[04m'
+		Lightblue = '\033[94m'
+		Red = '\033[31m'
 		Green = '\033[32m'
 		Reset = '\033[0m'
+
 		total = 0
 		for root, dirs, files in os.walk(dirname):
 			for fname in files:
