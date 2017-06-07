@@ -10,4 +10,7 @@
 
 ## Requirements:
 
-- NOTHING :).
+- Colorama
+
+## Todo:
+
