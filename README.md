@@ -14,3 +14,7 @@
 
 ## Todo:
 
+- [] Added Mac Bots?
+
+- [] Auto Scan Mode.
+
