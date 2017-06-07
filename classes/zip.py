@@ -4,8 +4,9 @@ init()
 
 class Zipped:
 	def log(self,msg,Color):
+		Reset = '\033[0m'
 		currenttime = time.strftime("%H:%M:%S")
-		sys.stdout.write("[%s] %s\n" % (currenttime, Color + (msg) ))
+		sys.stdout.write("[%s] %s\n" % (currenttime, Color + (msg) + Reset))
 		sys.stdout.flush()
 
 	def zipdir(self,zipname, dirname):
@@ -28,7 +29,7 @@ class Zipped:
 				path = os.path.join(root, fname)
 				arcname = os.path.join(basename, fname)
 				percent = 100 * current / total
-				self.log('%3d %s' % (percent, path), Green)
+				self.log('%s%3d%% %s%s' % (Green, percent, Reset, path), "")
 				z.write(path, arcname)
 				current += os.path.getsize(path)
 		z.close()
