@@ -13,7 +13,7 @@ Auto    = True
 
 #Common Places
 BOTS = {}
-if os.name != 'nt':
+if os.name == 'nt':
     USERNAME                =   os.getenv('username')
     BOTS["ANB AIO"]         =   "C:\Program Files (x86)\AIO Bot"
     BOTS["YCOPP"]           =   "C:\Users\%s\AppData\Local\yCopp\UltimateAdidasBot" % (USERNAME)
@@ -21,12 +21,12 @@ if os.name != 'nt':
     BOTS["SOLE SLAYER"]     =   "C:\Program Files (x86)\SoleSlayer"
     BOTS["TheSnkrsBot"]     =   "C:\Users\%s\Downloads\TheSnkrsBot\%shesnkrsbot"    % (USERNAME,"t")
 
-i = 0
-for BOT in BOTS:
-     log("Choice: %d Bot: %s" % (i, BOT))
-     i += 1
-
-exit()
+    i = 0
+    for BOT in BOTS:
+         log("Choice: %d Bot: %s" % (i, BOT))
+         i += 1
+elif os.name == 'nt':
+    log("No Bot's Path Loaded for your OS.")
 
 try:
     sys.argv[1]
