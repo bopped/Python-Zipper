@@ -25,7 +25,7 @@ if os.name == 'nt':
     for BOT in BOTS:
          log("Choice: %d Bot: %s" % (i, BOT))
          i += 1
-elif os.name == 'nt':
+elif os.name != 'nt':
     log("No Bot's Path Loaded for your OS.")
 
 try:
